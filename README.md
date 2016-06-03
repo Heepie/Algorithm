@@ -1,2 +1,2 @@
 # Algorithm
-To improve Algorithm Skillz
+To improve Algorithm Skill
