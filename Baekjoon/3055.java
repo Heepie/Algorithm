@@ -34,6 +34,7 @@ public class Main {
 //		vecBoard.add(new char[N][M]);
 		cache = new int[2][N][M];
 
+		for(int i=0 ; i<N; i++){
 	         String s = sc.nextLine();
 	         for(int j=0; j<M; j++){
 	        	 cache[0][i][j] = cache[1][i][j] = INF;
