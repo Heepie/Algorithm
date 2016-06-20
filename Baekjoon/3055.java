@@ -77,7 +77,7 @@ public class Main {
 				newX = curPos.getX() + point[k].x;
 				newY = curPos.getY() + point[k].y;
 
-				if (newX < N && newX >= 0 && newY < N && newY >= 0 && (mapBoard.get(curPos.getCount())[newX][newY] == '.' || mapBoard.get(curPos.getCount())[newX][newY] == 'D') && curPos.getCount()+1 < cache[0][newX][newY]) {
+				if (newX < N && newX >= 0 && newY < M && newY >= 0 && (mapBoard.get(curPos.getCount())[newX][newY] == '.' || mapBoard.get(curPos.getCount())[newX][newY] == 'D') && curPos.getCount()+1 < cache[0][newX][newY]) {
 					cache[0][newX][newY] = curPos.getCount()+1;
 					q.offer((new Pos(newX, newY, curPos.getCount()+1)));
 				}
@@ -113,7 +113,7 @@ public class Main {
 					newX = curPos.getX() + point[k].x;
 					newY = curPos.getY() + point[k].y;
 
-					if (newX < N && newX >= 0 && newY < N && newY >= 0 && mapBoard.get(count)[newX][newY] == '.' && cache[1][newX][newY] == INF) {
+					if (newX < N && newX >= 0 && newY < M && newY >= 0 && mapBoard.get(count)[newX][newY] == '.' && cache[1][newX][newY] == INF) {
 						cache[1][newX][newY] = 1;
 						mapBoard.get(count)[newX][newY] = '*';
 						w.offer(new Pos(newX, newY, curPos.getCount()+1));
